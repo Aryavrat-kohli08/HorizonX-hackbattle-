@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Privacy Nutrition</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <div class="eyebrow">PRIVACY NUTRITION</div>
+        <h1 id="host">Loading…</h1>
+      </div>
+      <button id="reset" title="Reset current tab">↻</button>
+    </header>
+
+    <section class="score-card">
+      <div class="score-ring" id="scoreRing">
+        <span id="grade">A</span>
+      </div>
+      <div>
+        <div class="score-number" id="score">100</div>
+        <div class="muted">estimated privacy score</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong id="trackerCount">0</strong><span>Trackers</span></div>
+      <div><strong id="fingerprintCount">0</strong><span>Fingerprint</span></div>
+      <div><strong id="thirdPartyCount">0</strong><span>3rd party</span></div>
+    </section>
+
+    <section>
+      <div class="section-title">LIVE ACTIVITY</div>
+      <div id="feed" class="feed"></div>
+    </section>
+
+    <section>
+      <div class="section-title">WHO'S WATCHING</div>
+      <div id="companies" class="companies"></div>
+    </section>
+
+    <footer>
+      Detection is heuristic. No requests are blocked.
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>
