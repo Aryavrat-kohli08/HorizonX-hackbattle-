@@ -1,0 +1,301 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 390px;
+  min-height: 560px;
+  background: #0b0d10;
+  color: #f4f6f8;
+}
+
+main { padding: 18px; }
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: .18em;
+  opacity: .55;
+  font-weight: 800;
+}
+
+h1 {
+  margin: 5px 0 0;
+  font-size: 18px;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+button {
+  border: 0;
+  background: #191d23;
+  color: white;
+  border-radius: 10px;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.score-card {
+  margin: 18px 0;
+  padding: 18px;
+  border-radius: 18px;
+  background: #14181d;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.score-ring {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 8px solid #42c883;
+  background: #0b0d10;
+}
+
+.score-ring.warn { border-color: #e4ae4d; }
+.score-ring.bad { border-color: #e06363; }
+
+.score-ring span {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.score-number {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.muted {
+  opacity: .52;
+  font-size: 11px;
+}
+
+.protection-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #14181d;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 14px 0;
+}
+
+.protection-label {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.protection-sub {
+  font-size: 10px;
+  opacity: .5;
+  margin-top: 2px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: #2a3038;
+  border-radius: 24px;
+  transition: background .15s;
+}
+
+.switch .slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  top: 3px;
+  background: #f4f6f8;
+  border-radius: 50%;
+  transition: transform .15s;
+}
+
+.switch input:checked + .slider {
+  background: #42c883;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.stats div {
+  background: #14181d;
+  border-radius: 12px;
+  padding: 9px 6px;
+}
+
+.stats strong {
+  display: block;
+  font-size: 18px;
+}
+
+.stats span {
+  opacity: .5;
+  font-size: 9px;
+}
+
+.section-title {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  opacity: .48;
+  margin-bottom: 8px;
+}
+
+.feed {
+  max-height: 205px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event {
+  background: #14181d;
+  border-radius: 10px;
+  padding: 9px 10px;
+}
+
+.event-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.domain {
+  font-size: 11px;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.badge {
+  font-size: 9px;
+  opacity: .7;
+  white-space: nowrap;
+}
+
+.detail {
+  margin-top: 3px;
+  font-size: 9px;
+  opacity: .45;
+}
+
+.companies {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+  background: #14181d;
+  padding: 8px 10px;
+  border-radius: 9px;
+  font-size: 11px;
+}
+
+.company span { opacity: .5; }
+
+footer {
+  border-top: 1px solid #20252c;
+  padding-top: 10px;
+  font-size: 9px;
+  opacity: .38;
+}
+.score-breakdown {
+  margin: -8px 0 16px;
+  padding: 11px 13px;
+  border-radius: 14px;
+  background: #14181d;
+}
+
+.breakdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breakdown-header .section-title {
+  margin-bottom: 5px;
+}
+
+.breakdown-baseline {
+  font-size: 9px;
+  opacity: .45;
+}
+
+.breakdown-row,
+.breakdown-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  padding: 3px 0;
+}
+
+.breakdown-row span {
+  opacity: .58;
+}
+
+.breakdown-row strong,
+.breakdown-total strong {
+  font-size: 10px;
+}
+
+.breakdown-total {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px solid #20252c;
+  font-weight: 800;
+}
+
+.breakdown-note {
+  margin-top: 6px;
+  font-size: 8px;
+  line-height: 1.35;
+  opacity: .35;
+}
